@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { useCallback } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import './App.css';
 
-function App() {
+const App = () => {
+    const navigate = useNavigate();
+    const navigateToProjects = useCallback( () => { navigate('projects')}, [],)
+    
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <body>
+        <div className='Center-content'>
+
+        <h1 className="Main-heading">Hey there! 👋</h1>
+        <h2 className="Sub-heading">I'm <span className="Heading-span">Nikita Sawant</span>, 😊 </h2>
+
+        <h3 className="Smaller-sub-heading">an <span className="Heading-span">Electronics Engineer</span> by degree, 🤓 <br/>
+          a <span className="Heading-span">Software Developer</span> by profession, 😎<br/>
+          and a curious <span className="Heading-span">art</span> and <span className="Heading-span">STEM enthusiast</span>. 🧐</h3>
+        <p className="Description">
+               Connect with me if you like or want to criticise my work. I would love to hear from you. 😄
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <button className="Projects-button" title='Projects' onClick={navigateToProjects}></button>
+        </div>
+      </body>
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.Projects-screen {
+  width: auto;
+  height: auto;
+  overflow:auto;
+}
+
+.Background-image-react {
+  top: 0;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  text-align: right;
+  width:60%;
+  z-index: 0;
+  
+}
+
+.Background-image-django {
+  top: 1080px;
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  text-align: right;
+  width:60%;
+  z-index: 0;
+}
