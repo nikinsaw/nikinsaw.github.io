@@ -4,7 +4,7 @@ import './App.css';
 
 const App = () => {
     const navigate = useNavigate();
-    const navigateToProjects = useCallback( () => { navigate('projects')}, [],)
+    const navigateToProjects = useCallback( () => { navigate('projects')}, [navigate],)
     
   return (
     <div className="App">
