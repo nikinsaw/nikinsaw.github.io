@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider , Route, createRoutesFromElements } from "react-router-dom";
 import ProjectsScreen from './containers/ProjectsScreen';
+import HobbiesScreen from './containers/HobbiesScreen';
 import App from './App';
 
 const router = 
@@ -12,6 +13,7 @@ createBrowserRouter(
     <Route>
       <Route path="/" element={<App/>}/>
       <Route path="projects" element={<ProjectsScreen />} />
+      <Route path="hobbies" element={<HobbiesScreen />} />
     </Route>
   )
   );
