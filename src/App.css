@@ -4,13 +4,17 @@
  overflow: auto;
 }
 
-.Projects-button {
-  padding:2%;
-}
 .Center-content {
+  display: flex;
   padding-top: 10%;
   margin: auto;
   width: 70%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Text-wrapper {
+  flex:4;
 }
 
 .Main-heading{
@@ -45,16 +49,3 @@
   font-weight: 200;
   width:70%;
 }
-.Work-and-Intrests-wrapper {
-  display:flex;
-  justify-content: space-around;
-  align-self: center;
-}
-
-.Work-and-Intrests-wrapper  li {
- list-style: none;
- font-size: 2em;
- width:fit-content;
- padding: 5%;
-}
-
