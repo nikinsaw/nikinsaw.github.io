@@ -1,0 +1,42 @@
+.Hobbies-screen {
+  display: flex;
+  flex-direction: column;
+}
+.Carousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  overflow: scroll;
+  margin-right: -620px;
+}
+
+.Image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -620px;
+}
+.Image-item {
+  position: relative;
+  scale: 1.1;
+  height: 90vh;
+  width: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Background-image-art {
+  display: flex;
+  position: relative;
+  scale: 0.99;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateX(-110%);
+  transition: all 0.5s ease-in-out;
+}
+
+.Background-image-art:hover {
+  transform: translateX(-100%);
+  scale: 1.1;
+}
