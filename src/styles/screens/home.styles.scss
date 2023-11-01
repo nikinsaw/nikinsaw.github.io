@@ -1,0 +1,173 @@
+.home {
+  &__main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+  &__social-icon {
+    width: 34px;
+    height: 34px;
+    padding: 0.6em;
+  }
+  &__content{ 
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 38em;
+  }
+
+  &__profile-image-wrapper {
+      width: 105px;
+      height:105px;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+      background: linear-gradient(45deg, var(--clr-accent-400), var(--clr-accent-300));
+      align-items: center;
+      justify-content: center;
+      display: flex;
+
+    }
+  &__profile-image {
+    border: solid 5px var(--clr-neutral-900);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
+  &__full-name{
+    font-size: var(--fs-700);
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-tertiary);
+    color: var(--clr-neutral-300);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  &__job-title{
+    font-size: var(--fs-650);
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-primary);
+    color: var(--clr-neutral-550);
+    margin: 0.2em 0;
+  }
+  &__status {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1em 0;
+    position: relative;
+
+    &__live-icon-wrapper {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 2px var(--clr-neutral-900);
+      border-radius: 100;
+      position: relative;
+    }
+    &__live-icon {
+      width: 7px;
+      height: 7px;
+      border-radius: 100%;
+      background-color: var(--clr-live);
+      position: absolute;
+    }
+    &__text {
+      font-size: var(--fs-450);
+      font-weight: var(--fw-regular);
+      font-family: var(--ff-primary);
+      color: var(--clr-neutral-600);
+    }
+  }
+  &__location {
+    font-size: var(--fs-450);
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-quaternary);
+    color: var(--clr-neutral-600);
+    margin: 0.2em 0 2em 0;
+  }
+  &__description {
+    display: grid; 
+    grid-template-columns: 1fr 6fr;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-secondary);
+    color: var(--clr-neutral-650);
+    margin: 1.5em 0.2em;
+    text-align: left;
+  }
+  &__work {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    &__tagline {
+      font-size: var(--fs-550);
+      font-weight: var(--fw-semi-bold);
+      font-family: var(--ff-tertiary);
+      color: var(--clr-neutral-350);
+      margin-bottom: 0.4em;
+      // hover
+      &:hover {
+        color: var(--clr-neutral-300);
+      }
+    }
+    &__image-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border-radius: 1.5rem;
+      padding: 1.25em 0.5em 0.5em 0.5em;
+      background-color: var(--clr-neutral-800);
+      border: solid var(--clr-neutral-700) 1px;
+              overflow: hidden;
+            &:hover {
+              background-color: var(--clr-neutral-700);
+              border: solid var(--clr-neutral-650) 1px;
+      }
+      a {
+        width:inherit;
+        height:inherit;
+        overflow: hidden;
+        border-radius: 1.5rem;
+      }
+    }
+    &__image {
+      width: 100%;
+      border-radius: 1.5rem;
+      margin-right: 0.5em;
+      opacity: 0.95;
+      transition: all 0.2s ease-in;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.015);
+      }
+    }
+  
+  }
+}
+
+@media (max-width: 50em){
+  .home {
+    &__description {
+      grid-template-columns: 1fr;
+      gap:0.5em;
+    }
+    &__content {
+      width: fit-content;
+      padding: 1.1em 2em 1.1em 1.1em;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+:root {
+  --clr-accent-400: hsl(187, 88%, 59%);
+  --clr-accent-300: hsl(278, 100%, 44%);
+
+  --clr-primary-400: hsl(228, 39%, 23%);
+  
+  --clr-live: hsl(178, 75%, 41%);
+  /* -----------  Dark neutrals ------------ */
+  --clr-neutral-900: #222222;
+  --clr-neutral-850: #232323;
+  --clr-neutral-800: #282828;
+  --clr-neutral-750: #2e2e2e;
+  --clr-neutral-700: #333333;
+  --clr-neutral-650: #707070;
+  --clr-neutral-600: #a0a0a0;
+  --clr-neutral-550: #b0b0b0;
+  /* -----------  Light neutrals ------------ */
+  --clr-neutral-500: #c0c0c0;
+  --clr-neutral-450: #c8c8c8;
+  --clr-neutral-400: #d0d0d0;
+  --clr-neutral-350: #d8d8d8;
+  --clr-neutral-300: #e0e0e0;
+  --clr-neutral-250: #e8e8e8;
+  --clr-neutral-200: #f0f0f0;
+  --clr-neutral-150: #f8f8f8;
+  --clr-neutral-100: #ffffff;
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Lexend", sans-serif;
+  --ff-tertiary: "Poppins", sans-serif;
+  --ff-quaternary: "Roboto Slab", serif;
+
+  --ff-body: var(--ff-secondary);
+  --ff-heading: var(--ff-tertiary);
+  --ff-nav: var(--ff-secondary);
+  --ff-button: var(--ff-tertiary);
+  --ff-description: var(--ff-quaternary);
+
+  --fw-extra-light: 100;
+  --fw-light: 200;
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-300: 0.8125rem;
+  --fs-400: 0.875rem;
+  --fs-500: 0.9375rem;
+  --fs-600: 1rem;
+  --fs-650: 1.2rem;
+  --fs-700: 1.5rem;
+  --fs-800: 1.75rem;
+  --fs-900: 2rem;
+
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-800);
+  --fs-secondary-heading: var(--fs-700);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-300);
+
+}
+
+@media (min-width: 50em) {
+  :root {
+    --fs-body: var(--fs-550);
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+    --fs-nav: var(--fs-300);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+// /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+// ul[role="list"],
+// ol[role="list"] {
+//   list-style: none;
+// }
+
+// /* Set core root defaults */
+// html:focus-within {
+//   scroll-behavior: smooth;
+// }
+
+html,
+body {
+  height: 100%;
+}
+
+// // /* Set core body defaults */
+// // body {
+// //   text-rendering: optimizeSpeed;
+// //   line-height: 1.5;
+// // }
+
+// // /* A elements that don't have a class get default styles */
+// // a:not([class]) {
+// //   text-decoration-skip-ink: auto;
+// // }
+
+// /* Make images easier to work with */
+// // img,
+// // picture,
+// // svg {
+// //   max-width: 100%;
+// //   display: block;
+// // }
+
+// /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+// // @media (prefers-reduced-motion: reduce) {
+// //   html:focus-within {
+// //     scroll-behavior: auto;
+// //   }
+
+// //   *,
+// //   *::before,
+// //   *::after {
+// //     animation-duration: 0.01ms !important;
+// //     animation-iteration-count: 1 !important;
+// //     transition-duration: 0.01ms !important;
+// //     scroll-behavior: auto !important;
+// //   }
+// // }
+
+
+// /* general styling */
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  color: var(--clr-primary-400);
+  background-color: var(--clr-neutral-900);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// // code {
+// //   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+// //     monospace;
+// // }

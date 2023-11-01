@@ -1,0 +1,29 @@
+.nav-bar{
+  display:flex;
+  height:100vh;
+  z-index: 999;
+  position:fixed;
+  width:fit-content;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--clr-neutral-850);
+  --border-right: solid 2px var(--clr-neutral-700);
+  border-right: var(--border-right);
+  &__icon {
+    width:25px;
+    height:25px;
+    padding: 0.5em 1em;
+  }
+}
+
+@media (max-width: 50em) {
+  .nav-bar {
+    flex-direction: row;
+    width: 100vw;
+    height:fit-content;
+    bottom: 0;
+    --border-right: none;
+    --border-top: solid 2px var(--clr-neutral-700);
+    border-top: var(--border-top);
+  }
+}

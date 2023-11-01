@@ -1,26 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider , Route, createRoutesFromElements } from "react-router-dom";
-import ProjectsScreen from './containers/ProjectsScreen';
-import HobbiesScreen from './containers/HobbiesScreen';
 import App from './App';
 
-const router = 
-createBrowserRouter(
-  createRoutesFromElements(
-    <Route>
-      <Route path="/" element={<App/>}/>
-      <Route path="projects" element={<ProjectsScreen />} />
-      <Route path="hobbies" element={<HobbiesScreen />} />
-    </Route>
-  )
-  );
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
 

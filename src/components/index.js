@@ -1,3 +1,4 @@
-import Header from './common/Header'
+import NavigationBar from './common/NavigationBar'
+import YMotionComponent from './common/YMotionComponent'
 
-export {Header}
+export { NavigationBar, YMotionComponent }
