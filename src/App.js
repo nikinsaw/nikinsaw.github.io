@@ -8,7 +8,7 @@ import { map } from 'lodash';
 
 const App = () => {
   const [screen, setScreen] = useState('/')
-  const [isDarkTheme, setIsDarkTheme] = useState(true)
+  const [isDarkTheme] = useState(true)
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {

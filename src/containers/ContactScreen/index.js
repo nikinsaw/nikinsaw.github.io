@@ -1,16 +1,10 @@
 import { YMotionComponent } from '../../components';
 import '../../styles/screens/contact.styles.scss'
-import Lottie from 'lottie-react';
 import LiveAnimation from '../../assets/animations/live.json'
-import { useCallback, useMemo, useState } from 'react';
 import { useLottie } from 'lottie-react';
 
 
 function ContactScreen() {
-
-  const [isDarkTheme, setIsDarkTheme] = useState(true)
-  const theme = useMemo(() => isDarkTheme ? 'DarkBG' : 'LightBG', [isDarkTheme])
-  const size = useMemo(() => '50', [])
   const { View } = useLottie({
     animationData: LiveAnimation,
     loop: true,

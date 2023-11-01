@@ -4,7 +4,7 @@ import { useLottie } from 'lottie-react';
 import LiveAnimation from '../../assets/animations/live.json'
 import { socialIconNames, socialIcons } from '../../data';
 import { map } from 'lodash';
-import { useCallback, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 
 const work = [
   {
@@ -31,16 +31,9 @@ const work = [
 
 
 const SocialIcon = ({ name, theme, size, index, link }) => {
-  const [isActive, setIsActive] = useState(false)
+  const [isActive] = useState(false)
 
   const activeText = useMemo(() => isActive ? 'Active' : 'Inactive', [isActive])
-  const onFocus = useCallback((i) => () => {
-    setIsActive(i === index)
-  }, [index])
-
-  const onBlur = useCallback((i) => () => {
-    setIsActive(i === index)
-  }, [index])
 
   return (
     <a key={index} href={link} className='Header-list-item'>
@@ -50,7 +43,7 @@ const SocialIcon = ({ name, theme, size, index, link }) => {
 }
 function HomeScreen() {
 
-  const [isDarkTheme, setIsDarkTheme] = useState(true)
+  const [isDarkTheme] = useState(true)
   const theme = useMemo(() => isDarkTheme ? 'DarkBG' : 'LightBG', [isDarkTheme])
   const size = useMemo(() => '50', [])
   const { View } = useLottie({
