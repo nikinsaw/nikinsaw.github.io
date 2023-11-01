@@ -3,6 +3,7 @@ import '../../styles/screens/contact.styles.scss'
 import Lottie from 'lottie-react';
 import LiveAnimation from '../../assets/animations/live.json'
 import { useCallback, useMemo, useState } from 'react';
+import { useLottie } from 'lottie-react';
 
 
 function ContactScreen() {
@@ -10,7 +11,14 @@ function ContactScreen() {
   const [isDarkTheme, setIsDarkTheme] = useState(true)
   const theme = useMemo(() => isDarkTheme ? 'DarkBG' : 'LightBG', [isDarkTheme])
   const size = useMemo(() => '50', [])
-
+  const { View } = useLottie({
+    animationData: LiveAnimation,
+    loop: true,
+    autoplay: true,
+    rendererSettings: { preserveAspectRatio: 'xMidYMid slice', height: 70, width: 30 },
+    speed: 0.1,
+    duration: 3,
+  })
   return (
     <div className='contact__main-wrapper' >
       <div className='contact__content'>
@@ -18,7 +26,7 @@ function ContactScreen() {
         <YMotionComponent className='contact__subtitle' tag='h2' delay={0.35}>Let's talk about working together</YMotionComponent>
         <YMotionComponent className='contact__status' tag='div' delay={0.8}>
           <div className='contact__status__live-icon-wrapper'>
-            <Lottie options={{ loop: true, autoplay: true, animationData: LiveAnimation, rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }, speed: 0.1, duration: 3 }} height={70} width={30} />
+            {View}
             <div className={'contact__status__live-icon'} />
           </div>
           <h3 className='contact__status__text'>Available for new opportunities</h3>

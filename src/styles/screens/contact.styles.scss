@@ -54,11 +54,13 @@
     }
 
     &__live-icon {
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       border-radius: 100%;
       background-color: var(--clr-live);
       position: absolute;
+      top:9px;
+      bottom:9px;
     }
 
     &__text {
