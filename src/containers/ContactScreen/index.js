@@ -1,6 +1,6 @@
 import { YMotionComponent } from '../../components';
 import '../../styles/screens/contact.styles.scss'
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import LiveAnimation from '../../assets/animations/live.json'
 import { useCallback, useMemo, useState } from 'react';
 

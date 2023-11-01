@@ -1,6 +1,6 @@
 import { YMotionComponent } from '../../components';
 import '../../styles/screens/home.styles.scss'
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import LiveAnimation from '../../assets/animations/live.json'
 import { socialIconNames, socialIcons } from '../../data';
 import { map } from 'lodash';
