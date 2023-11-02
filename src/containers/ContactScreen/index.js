@@ -1,8 +1,14 @@
-import { YMotionComponent } from '../../components';
-import '../../styles/screens/contact.styles.scss'
-import LiveAnimation from '../../assets/animations/live.json'
-import { useLottie } from 'lottie-react';
 
+// library imports
+import { useLottie } from 'lottie-react';
+import { motion } from 'framer-motion'
+// local imports
+// components
+import { YMotionComponent } from '../../components';
+// assets
+import LiveAnimation from '../../assets/animations/live.json'
+// styles
+import '../../styles/screens/contact.styles.scss'
 
 function ContactScreen() {
   const { View } = useLottie({
@@ -14,7 +20,7 @@ function ContactScreen() {
     duration: 3,
   })
   return (
-    <div className='contact__main-wrapper' >
+    <motion.div className='contact__main-wrapper' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: 20 }}>
       <div className='contact__content'>
         <YMotionComponent className='contact__title' tag='h1' delay={0.1} >Contact</YMotionComponent>
         <YMotionComponent className='contact__subtitle' tag='h2' delay={0.35}>Let's talk about working together</YMotionComponent>
@@ -36,7 +42,7 @@ function ContactScreen() {
           </p>
         </YMotionComponent>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

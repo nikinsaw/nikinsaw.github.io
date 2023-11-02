@@ -1,10 +1,15 @@
-import './index.scss'
-import { map } from 'lodash';
 import React, { useCallback, useMemo, useState } from 'react';
+// library imports
+import { map } from 'lodash';
+import { Link } from 'react-router-dom';
+// local imports
+// data
 import { navBarIcons, nav } from '../../../data';
+// styles
+import './index.scss'
 
 
-const NavIcon = ({ name, theme, size, index, onClick }) => {
+const NavIcon = ({ path, name, theme, size, index, onClick }) => {
   const [isActive, setIsActive] = useState(false)
   const activeText = useMemo(() => isActive ? 'Active' : 'Inactive', [isActive])
   const onFocus = useCallback((i) => () => {
@@ -12,13 +17,13 @@ const NavIcon = ({ name, theme, size, index, onClick }) => {
   }, [index])
 
   const onBlur = useCallback((i) => () => {
-    setIsActive(i === index)
+    setIsActive(i !== index)
   }, [index])
 
   return (
-    <div key={index} onFocus={onFocus(index)} onBlur={onBlur(index)} onClick={onClick} className='Header-list-item'>
-      <img className='nav-bar__icon' title="" alt="blah" src={navBarIcons[`${name + theme + activeText + size}`]} />
-    </div>
+    <Link to={path} key={index} onFocus={onFocus(index)} onBlur={onBlur(index)} className='Header-list-item'>
+      <img className='nav-bar__icon' title="" alt={`${name}`} src={navBarIcons[`${name + theme + activeText + size}`]} />
+    </Link>
   )
 }
 
@@ -33,7 +38,7 @@ const NavigationBar = ({ isDarkTheme, onClickOption }) => {
         index={index}
         size={size}
         theme={theme} {...item}
-        onClick={onClickOption(item.screenUrl)}
+        path={item.screenUrl}
       />)}
     </div>
   );

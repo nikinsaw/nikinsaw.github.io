@@ -1,3 +1,4 @@
+// library imports
 import { motion } from 'framer-motion';
 
 const componentMap = {
@@ -20,15 +21,13 @@ const YMotionComponent = ({ tag = 'div', delay, children, ...rest }) => {
 
   return ((tag === 'img')
     ? <MotionComponent
-      exit={{ opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       initial={{ y: 30, opacity: 0 }}
       transition={{ type: "spring", bounce: 0.1, duration: 0.8, delay, ease: 'easeIn' }}
       {...rest} />
     : <MotionComponent
-      exit={{ opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      initial={{ y: 20, opacity: 0 }}
+      initial={{ y: 50, opacity: 0 }}
       transition={{ type: "spring", bounce: 0.1, duration: 0.8, delay, ease: 'easeIn' }}
       {...rest} >
       {children}

@@ -1,10 +1,17 @@
-import { YMotionComponent } from '../../components';
-import '../../styles/screens/home.styles.scss'
+import { useCallback, useMemo, useState } from 'react';
+// library imports
 import { useLottie } from 'lottie-react';
-import LiveAnimation from '../../assets/animations/live.json'
-import { socialIconNames, socialIcons } from '../../data';
+import { motion } from 'framer-motion';
 import { map } from 'lodash';
-import { useMemo, useState } from 'react';
+// local imports
+// components
+import { YMotionComponent } from '../../components';
+// assets
+import LiveAnimation from '../../assets/animations/live.json'
+// data
+import { socialIconNames, socialIcons } from '../../data';
+// styles
+import '../../styles/screens/home.styles.scss'
 
 const work = [
   {
@@ -31,13 +38,22 @@ const work = [
 
 
 const SocialIcon = ({ name, theme, size, index, link }) => {
-  const [isActive] = useState(false)
+  const [isActive, setIsActive] = useState(false)
 
   const activeText = useMemo(() => isActive ? 'Active' : 'Inactive', [isActive])
 
+  const onMouseOver = useCallback((i) => () => {
+    setIsActive(i === index)
+  }, [index])
+
+  const onMouseLeave = useCallback((i) => () => {
+    setIsActive(i !== index)
+  }, [index])
+
+
   return (
-    <a key={index} href={link} className='Header-list-item'>
-      <img className='home__social-icon' title="" alt="blah" src={socialIcons[`${name + theme + activeText + size}`]} />
+    <a key={index} href={link} onMouseOver={onMouseOver(index)} onMouseLeave={onMouseLeave(index)} className='Header-list-item'>
+      <img className='home__social-icon' title="" alt={`${name}`} src={socialIcons[`${name + theme + activeText + size}`]} />
     </a>
   )
 }
@@ -55,7 +71,7 @@ function HomeScreen() {
     duration: 3,
   })
   return (
-    <div className='home__main-wrapper' >
+    <motion.div className='home__main-wrapper' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: 20 }}>
       <div className='home__content'>
         <YMotionComponent className='home__profile-image-wrapper' tag='div' delay={0.05}>
           <img className='home__profile-image' src={require('../../assets/nikita.jpg')} alt='profile' />
@@ -96,9 +112,6 @@ function HomeScreen() {
             <br />
             <br />
           </p>
-
-          {/* <p>Skills</p> */}
-
           <p>Work</p>
           <div>
             {map(work, (item, index) => (
@@ -112,7 +125,7 @@ function HomeScreen() {
           </div>
         </YMotionComponent>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

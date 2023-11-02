@@ -118,7 +118,7 @@
       font-weight: var(--fw-semi-bold);
       font-family: var(--ff-tertiary);
       color: var(--clr-neutral-350);
-      margin-bottom: 0.4em;
+      margin-bottom: 0.5em;
       // hover
       &:hover {
         color: var(--clr-neutral-300);
@@ -131,7 +131,8 @@
       align-items: flex-start;
       justify-content: flex-start;
       border-radius: 1.5rem;
-      padding: 1.25em 0.5em 0.5em 0.5em;
+      margin-bottom: 2em;
+      padding: 1em 0.6em 0.6em 0.6em;
       background-color: var(--clr-neutral-800);
       border: solid var(--clr-neutral-700) 1px;
               overflow: hidden;
