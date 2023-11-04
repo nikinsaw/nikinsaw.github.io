@@ -1,0 +1,43 @@
+/* ---------------- Button Component ------------------ */
+.button {
+  display: flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-secondary);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.96rem;
+  font-weight: var(--fw-regular);
+  border: solid 1px var(--clr-neutral-750);
+  padding: 10px 30px;
+  transition: all 0.3s ease-in-out;
+  &__icon {
+    width:20px;
+    padding: 0.2em 0em 0em 0.5em;
+  }
+
+}
+
+.light-button {
+  background-color: var(--clr-neutral-150);
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--clr-neutral-700);
+  &:hover {
+    background-color:var(--clr-neutral-300);
+  }
+}
+
+.dark-button {
+  background-color: var(--clr-neutral-800);
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--clr-neutral-350);
+  &:hover {
+    background-color: var(--clr-neutral-750);
+      border: solid 1px var(--clr-neutral-700);
+  }
+}
+
+

@@ -14,18 +14,19 @@ const componentMap = {
 
 };
 
-const XMotionComponent = ({ tag = 'div', delay, children, startX = -500, endX = 0 }) => {
+const XMotionComponent = ({ tag = 'div', delay, children, startX = -500, endX = 0, ...rest }) => {
   const MotionComponent = componentMap[tag];
 
   return (
     <MotionComponent
-      initial={{ y: startX, opacity: 0 }}
-      animate={{ y: endX, opacity: 1 }}
+      initial={{ x: startX, opacity: 0 }}
+      animate={{ x: endX, opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{
         type: 'spring',
         bounce: 0.2, duration: 1.5, delay, ease: 'easeIn'
       }}
+      {...rest}
     >
       {children}
     </MotionComponent>

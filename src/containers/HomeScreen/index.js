@@ -5,13 +5,14 @@ import { motion } from 'framer-motion';
 import { map } from 'lodash';
 // local imports
 // components
-import { YMotionComponent } from '../../components';
+import { Button, YMotionComponent, XMotionComponent } from '../../components';
 // assets
 import LiveAnimation from '../../assets/animations/live.json'
 // data
 import { socialIconNames, socialIcons } from '../../data';
 // styles
 import '../../styles/screens/home.styles.scss'
+import { Link } from 'react-router-dom';
 
 const work = [
   {
@@ -97,6 +98,17 @@ function HomeScreen() {
             )
           }
           )}
+        </YMotionComponent>
+        <YMotionComponent className='home__contact-email-buttons-wrapper' tag='div' delay={1.125} >
+          <XMotionComponent className='home__contact-button-wrapper' tag='div' delay={1.125} startX={-50}>
+            <Link to='/contact' className='home__contact-button-link' >
+              <Button text='Contact me' colorClass='primary' icon={require('../../assets/icons/icons_70/icons8-envelope-50.png')} />
+            </Link>
+          </XMotionComponent>
+          <p>or</p>
+          <XMotionComponent className='home__email-button-wrapper' tag='div' delay={1.125} startX={50}>
+            <Button text='Copy email' colorClass='secondary' icon={require('../../assets/icons/icons_70/icons8-copy-48.png')} />
+          </XMotionComponent>
         </YMotionComponent>
         <YMotionComponent className='home__location' tag='h3' delay={1.2}> Mumbai, India </YMotionComponent>
         <YMotionComponent className='home__description' tag='div' delay={1.5}>

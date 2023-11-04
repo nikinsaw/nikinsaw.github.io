@@ -91,6 +91,16 @@
       color: var(--clr-neutral-600);
     }
   }
+  &__contact-email-buttons-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+    margin: 1em 0;
+  }
+  &__contact-button-link {
+    text-decoration: none;
+  }
   &__location {
     font-size: var(--fs-450);
     font-weight: var(--fw-regular);
@@ -172,5 +182,17 @@
       width: fit-content;
       padding: 1.1em 2em 1.1em 1.1em;
     }
+    &__contact-email-buttons-wrapper {
+      width: 80%;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      gap: 0.5em;
+      justify-items: stretch;
+
+      p {
+        justify-self: center;
+      }
+    }
   }
+
 }

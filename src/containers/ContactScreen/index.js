@@ -22,16 +22,16 @@ function ContactScreen() {
   return (
     <motion.div className='contact__main-wrapper' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: 20 }}>
       <div className='contact__content'>
-        <YMotionComponent className='contact__title' tag='h1' delay={0.1} >Contact</YMotionComponent>
-        <YMotionComponent className='contact__subtitle' tag='h2' delay={0.35}>Let's talk about working together</YMotionComponent>
-        <YMotionComponent className='contact__status' tag='div' delay={0.8}>
+        <YMotionComponent className='contact__title' tag='h1' delay={0.01} >Contact</YMotionComponent>
+        <YMotionComponent className='contact__subtitle' tag='h2' delay={0.035}>Let's talk about working together</YMotionComponent>
+        <YMotionComponent className='contact__status' tag='div' delay={0.08}>
           <div className='contact__status__live-icon-wrapper'>
             {View}
             <div className={'contact__status__live-icon'} />
           </div>
           <h3 className='contact__status__text'>Available for new opportunities</h3>
         </YMotionComponent>
-        <YMotionComponent className='contact__description' tag='div' delay={1.5}>
+        <YMotionComponent className='contact__description' tag='div' delay={0.15}>
           <p>
             <br />
             <br />

@@ -30,7 +30,7 @@ const App = () => {
       <NavigationBar isMobile={isMobile} isDarkTheme={isDarkTheme} />
       <React.Suspense fallback={<div>Loading...</div>}>
         <AnimatePresence mode='wait' >
-          <Routes key={location.pathname} location={location} transition={{ when: "beforeChildren" }} >
+          <Routes key={location.pathname} location={location} >
             <Route path="/" element={<HomeScreen />} />
             <Route path="projects/" element={<ProjectsScreen />} />
             <Route path="stack/" element={<StackScreen />} />
