@@ -1,0 +1,54 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 5rem 0;
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35em;
+  }
+  &__title {
+    font-size: var(--fs-650);
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-tertiary);
+    color: var(--clr-neutral-350);
+    margin-top: 3rem;
+    align-self: flex-start;
+  }
+  &__image{
+    width: 100%;
+    border-radius: 1.5rem;
+    margin-right: 0.5em;
+    opacity: 1;
+  }
+    &__description {
+      font-size: var(--fs-400);
+      font-weight: var(--fw-regular);
+      font-family: var(--ff-secondary);
+      color: var(--clr-neutral-550);
+      margin: 1.5em 0.2em;
+      text-align: left;
+    }
+}
+
+@media (max-width: 50em) {
+  .project {
+    &__description {
+      grid-template-columns: 1fr;
+      gap: 0.5em;
+    }
+
+    &__content {
+      width: fit-content;
+      padding: 1.1em 2em 1.1em 1.1em;
+    }
+  }
+
+}

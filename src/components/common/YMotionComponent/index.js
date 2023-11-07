@@ -24,11 +24,13 @@ const YMotionComponent = ({ tag = 'div', delay, children, ...rest }) => {
       animate={{ y: 0, opacity: 1 }}
       initial={{ y: 30, opacity: 0 }}
       transition={{ type: "spring", bounce: 0.1, duration: 0.8, delay, ease: 'easeIn' }}
+      exit={false}
       {...rest} />
     : <MotionComponent
       animate={{ y: 0, opacity: 1 }}
       initial={{ y: 50, opacity: 0 }}
       transition={{ type: "spring", bounce: 0.1, duration: 0.8, delay, ease: 'easeIn' }}
+      exit={false}
       {...rest} >
       {children}
     </MotionComponent >)

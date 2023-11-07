@@ -10,11 +10,12 @@
   font-size: 0.96rem;
   font-weight: var(--fw-regular);
   border: solid 1px var(--clr-neutral-750);
-  padding: 10px 30px;
+  height: 45px;
+  padding: 0 2em;
   transition: all 0.3s ease-in-out;
   &__icon {
     width:20px;
-    padding: 0.2em 0em 0em 0.5em;
+    padding: 0.4em 0em 0em 0.5em;
   }
 
 }

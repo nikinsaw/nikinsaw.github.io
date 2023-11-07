@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 // library imports
 import { useLottie } from 'lottie-react';
 import { motion } from 'framer-motion';
@@ -9,33 +9,11 @@ import { Button, YMotionComponent, XMotionComponent } from '../../components';
 // assets
 import LiveAnimation from '../../assets/animations/live.json'
 // data
-import { socialIconNames, socialIcons } from '../../data';
+import { work, socialIconNames, socialIcons } from '../../data';
 // styles
 import '../../styles/screens/home.styles.scss'
 import { Link } from 'react-router-dom';
 
-const work = [
-  {
-    name: 'Petzzing',
-    tagline: 'Rebuilding Petzzing App',
-    link: 'https://petzzing.com/',
-    image: require('../../assets/work/petzzing.png')
-  },
-
-  {
-    name: 'Petzzing Partner',
-    tagline: 'New partner app for Petzzing',
-    link: 'https://petzzing.com/',
-    image: require('../../assets/work/petzzing-partner.png')
-  },
-
-  {
-    name: 'Whiskey Shelf',
-    tagline: 'Building the Whiskey Shelf App',
-    link: 'https://petzzing.com/',
-    image: require('../../assets/work/whiskey-shelf.png')
-  },
-]
 
 
 const SocialIcon = ({ name, theme, size, index, link }) => {
@@ -51,6 +29,9 @@ const SocialIcon = ({ name, theme, size, index, link }) => {
     setIsActive(i !== index)
   }, [index])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <a key={index} href={link} onMouseOver={onMouseOver(index)} onMouseLeave={onMouseLeave(index)} className='Header-list-item'>
@@ -71,8 +52,13 @@ function HomeScreen() {
     speed: 0.1,
     duration: 3,
   })
+
+  const onClickCopyEmail = useCallback(() => {
+    navigator.clipboard.writeText('nikita@nikinsaw.xyz')
+  }, [])
+
   return (
-    <motion.div className='home__main-wrapper' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: 20 }}>
+    <motion.div className='home__main-wrapper' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: 20 }} >
       <div className='home__content'>
         <YMotionComponent className='home__profile-image-wrapper' tag='div' delay={0.05}>
           <img className='home__profile-image' src={require('../../assets/nikita.jpg')} alt='profile' />
@@ -107,13 +93,13 @@ function HomeScreen() {
           </XMotionComponent>
           <p>or</p>
           <XMotionComponent className='home__email-button-wrapper' tag='div' delay={1.125} startX={50}>
-            <Button text='Copy email' colorClass='secondary' icon={require('../../assets/icons/icons_70/icons8-copy-48.png')} />
+            <Button text='Copy email' colorClass='secondary' icon={require('../../assets/icons/icons_70/icons8-copy-48.png')} onClick={onClickCopyEmail} />
           </XMotionComponent>
         </YMotionComponent>
         <YMotionComponent className='home__location' tag='h3' delay={1.2}> Mumbai, India </YMotionComponent>
         <YMotionComponent className='home__description' tag='div' delay={1.5}>
           <p>About</p>
-          <p>
+          <p className='home__description__details' >
             I'm Nikita Sawant, a software developer based in Mumbai.
             <br />
             <br />
@@ -129,9 +115,9 @@ function HomeScreen() {
             {map(work, (item, index) => (
               <div key={index} className='home__work__image-container'>
                 <h1 className='home__work__tagline'>  # {item.tagline}</h1>
-                <a href={item.link} target='_blank' rel="noreferrer">
+                <Link to={`projects/${item.slug}`}>
                   <img className='home__work__image' src={item.image} alt={item.name} />
-                </a>
+                </Link>
               </div>
             ))}
           </div>

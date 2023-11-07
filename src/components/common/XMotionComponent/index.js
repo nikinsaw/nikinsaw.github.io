@@ -21,7 +21,7 @@ const XMotionComponent = ({ tag = 'div', delay, children, startX = -500, endX = 
     <MotionComponent
       initial={{ x: startX, opacity: 0 }}
       animate={{ x: endX, opacity: 1 }}
-      exit={{ opacity: 0 }}
+      exit={false}
       transition={{
         type: 'spring',
         bounce: 0.2, duration: 1.5, delay, ease: 'easeIn'
