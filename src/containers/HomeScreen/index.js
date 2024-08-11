@@ -54,7 +54,7 @@ function HomeScreen() {
   })
 
   const onClickCopyEmail = useCallback(() => {
-    navigator.clipboard.writeText('nikita@nikinsaw.xyz')
+    navigator.clipboard.writeText('nikitanarendrasawant@gmail.com')
   }, [])
 
   return (
