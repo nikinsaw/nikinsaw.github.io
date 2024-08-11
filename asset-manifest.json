@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2a69ec78.css",
+    "main.js": "/static/js/main.eecc7a63.js",
+    "static/js/988.cb4fb04e.chunk.js": "/static/js/988.cb4fb04e.chunk.js",
+    "static/media/TileOilPaint.jpg": "/static/media/TileOilPaint.11e77a5b1b8ac9be8248.jpg",
+    "static/media/petzzing.png": "/static/media/petzzing.26e8f622f0d5cadd7290.png",
+    "static/media/whiskey-shelf.png": "/static/media/whiskey-shelf.a72ed09bd4a0db48f1e9.png",
+    "static/media/ColorfulCock.jpg": "/static/media/ColorfulCock.0219cd5fee9f89bbffa8.jpg",
+    "static/media/InTheLightOfDarkness.jpg": "/static/media/InTheLightOfDarkness.f9c8342a145a948f0f0d.jpg",
+    "static/media/ColorfulParrot.jpg": "/static/media/ColorfulParrot.2ac15c3927633efec12c.jpg",
+    "static/media/petzzing-partner.png": "/static/media/petzzing-partner.3937a5cab0cdaa508067.png",
+    "static/media/nikita.jpg": "/static/media/nikita.0a7d216c9cf73603fa05.jpg",
+    "static/media/ColorfulLion.jpg": "/static/media/ColorfulLion.149eeef61fc3cb392f8e.jpg",
+    "static/media/BlackWidow.jpg": "/static/media/BlackWidow.33a8d8420e8b57ac6bb7.jpg",
+    "index.html": "/index.html",
+    "main.2a69ec78.css.map": "/static/css/main.2a69ec78.css.map",
+    "main.eecc7a63.js.map": "/static/js/main.eecc7a63.js.map",
+    "988.cb4fb04e.chunk.js.map": "/static/js/988.cb4fb04e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a69ec78.css",
+    "static/js/main.eecc7a63.js"
+  ]
+}
