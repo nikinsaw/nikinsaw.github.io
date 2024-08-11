@@ -30,7 +30,7 @@
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Lexend", sans-serif;
   --ff-tertiary: "Poppins", sans-serif;
-  --ff-quaternary: "Roboto Slab", serif;
+  --ff-quaternary: "Noto Sans Mono", monospace;
 
   --ff-body: var(--ff-secondary);
   --ff-heading: var(--ff-tertiary);
@@ -39,12 +39,13 @@
   --ff-description: var(--ff-quaternary);
 
   --fw-extra-light: 100;
-  --fw-light: 200;
+  --fw-light: 300;
   --fw-regular: 400;
   --fw-semi-bold: 500;
   --fw-bold: 700;
 
   --fs-300: 0.8125rem;
+  --fs-350: 0.855rem;
   --fs-400: 0.875rem;
   --fs-500: 0.9375rem;
   --fs-600: 1rem;

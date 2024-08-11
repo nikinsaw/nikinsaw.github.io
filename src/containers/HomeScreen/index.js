@@ -1,5 +1,6 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState, useRef } from 'react';
 // library imports
+import DecodeAnimation from "react-decode-animation";
 import { useLottie } from 'lottie-react';
 import { motion } from 'framer-motion';
 import { map } from 'lodash';
@@ -41,6 +42,7 @@ const SocialIcon = ({ name, theme, size, index, link }) => {
 }
 function HomeScreen() {
 
+  const ref = useRef(null);
   const [isDarkTheme] = useState(true)
   const theme = useMemo(() => isDarkTheme ? 'DarkBG' : 'LightBG', [isDarkTheme])
   const size = useMemo(() => '50', [])
@@ -56,6 +58,11 @@ function HomeScreen() {
   const onClickCopyEmail = useCallback(() => {
     navigator.clipboard.writeText('nikitanarendrasawant@gmail.com')
   }, [])
+
+  useEffect(() => {
+    ref.current.play()
+  }, [])
+
 
   return (
     <motion.div className='home__main-wrapper' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, y: 20 }} >
@@ -96,7 +103,13 @@ function HomeScreen() {
             <Button text='Copy email' colorClass='secondary' icon={require('../../assets/icons/icons_70/icons8-copy-48.png')} onClick={onClickCopyEmail} />
           </XMotionComponent>
         </YMotionComponent>
-        <YMotionComponent className='home__location' tag='h3' delay={1.2}> Mumbai, India </YMotionComponent>
+        <YMotionComponent className='home__location' tag='h3' delay={1.2}>
+          <DecodeAnimation
+            ref={ref}
+            interval={98}
+            customCharacters='QWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%&'
+            text={"MUMBAI, INDIA 19.0760° N, 72.8777° E"}
+          /></YMotionComponent>
         <YMotionComponent className='home__description' tag='div' delay={1.5}>
           <p>About</p>
           <p className='home__description__details' >
