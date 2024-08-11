@@ -64,7 +64,7 @@ function HomeScreen() {
           <img className='home__profile-image' src={require('../../assets/nikita.jpg')} alt='profile' />
         </YMotionComponent>
         <YMotionComponent className='home__full-name' tag='h1' delay={0.1} >Nikita Sawant</YMotionComponent>
-        <YMotionComponent className='home__job-title' tag='h2' delay={0.35}>Software Developer at Petzzing</YMotionComponent>
+        <YMotionComponent className='home__job-title' tag='h2' delay={0.35}>Lead Software Engineer at Persistent Systems</YMotionComponent>
         <YMotionComponent className='home__status' tag='div' delay={0.8}>
           <div className='home__status__live-icon-wrapper'>
             <>{View}</>
@@ -103,7 +103,7 @@ function HomeScreen() {
             I'm Nikita Sawant, a software developer based in Mumbai.
             <br />
             <br />
-            With over 3 years of experience in building and maintaining mobile apps using React Native, I take pride in delivering applications that are user-friendly, efficient and visually appealing.
+            With over 3.5 years of experience in building and maintaining mobile apps using React Native, I take pride in delivering applications that are user-friendly, efficient and visually appealing.
             <br />
             <br />
             My journey in IT isn’t a career choice; it’s my passion to use technology to transform lives, by creating apps that bring service at your fingertips. I firmly believe in the power of technology to make a difference in the world.
