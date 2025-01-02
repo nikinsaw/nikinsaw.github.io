@@ -11,6 +11,7 @@ import { Button, YMotionComponent, XMotionComponent } from '../../components';
 import LiveAnimation from '../../assets/animations/live.json'
 // data
 import { work, socialIconNames, socialIcons } from '../../data';
+import { getYearsTillNow } from '../../helpers/utils'
 // styles
 import '../../styles/screens/home.styles.scss'
 import { Link } from 'react-router-dom';
@@ -40,7 +41,10 @@ const SocialIcon = ({ name, theme, size, index, link }) => {
     </a>
   )
 }
+
+
 function HomeScreen() {
+  const [yearsOfExperience] = useState(() => getYearsTillNow())
 
   const ref = useRef(null);
   const [isDarkTheme] = useState(true)
@@ -116,7 +120,7 @@ function HomeScreen() {
             I'm Nikita Sawant, a software developer based in Mumbai.
             <br />
             <br />
-            With over 3.5 years of experience in building and maintaining mobile apps using React Native, I take pride in delivering applications that are user-friendly, efficient and visually appealing.
+            With over {yearsOfExperience} years of experience in building and maintaining mobile apps using React Native, I take pride in delivering applications that are user-friendly, efficient and visually appealing.
             <br />
             <br />
             My journey in IT isn’t a career choice; it’s my passion to use technology to transform lives, by creating apps that bring service at your fingertips. I firmly believe in the power of technology to make a difference in the world.
