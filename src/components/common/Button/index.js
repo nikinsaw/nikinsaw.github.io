@@ -8,9 +8,12 @@ const Button = ({ colorClass, text, icon, onClick, onMouseOver, onMouseLeave }) 
       <div className='button__text-wrapper'>
         {text}
       </div>
-      <div className='button__icon-wrapper'>
-        <img className='button__icon' src={icon} alt="icon" />
-      </div>
+      {
+        icon &&
+        <div className='button__icon-wrapper'>
+          <img className='button__icon' src={icon} alt="icon" />
+        </div>
+      }
     </button>
   )
 }

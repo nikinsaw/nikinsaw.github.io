@@ -37,8 +37,89 @@
   color: var(--clr-neutral-350);
   &:hover {
     background-color: var(--clr-neutral-750);
-      border: solid 1px var(--clr-neutral-700);
+    border: solid 1px var(--clr-neutral-700);
   }
 }
 
+
+/* ---------------- TextInput Component ------------------ */
+.input-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0.5em 0;
+}
+
+.input {
+  display: flex;
+  width: 100%;
+  font-family: var(--ff-secondary);
+  border-radius: 8px;
+  font-size: 0.96rem;
+  font-weight: var(--fw-regular);
+  height: 45px;
+  box-sizing: border-box;
+  padding: 0.1rem 0.9rem;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  &:hover {
+    border: none;
+    border-style: none;
+  }
+
+  &:focus {
+    border: none;
+    border-style: none;
+  }
+}
+
+.area {
+  padding-top: 1em;
+  height: 150px;
+  resize: none;
+}
+
+.light-input {
+  width: 100%;
+  height: 45px;
+  padding: 0 1em;
+  border-radius: 8px;
+  border-width: 0px;
+  font-family: var(--ff-secondary);
+  font-size: 0.96rem;
+  font-weight: var(--fw-regular);
+}
+
+.dark-input {
+  border: none;
+  background-color: var(--clr-neutral-700);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--clr-neutral-350);
+  &::placeholder {
+    color: var(--clr-neutral-650);
+  }
+}
+
+.letter-limit {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-secondary);
+  color: var(--clr-neutral-650);
+  margin-top: 0.2em;
+}
+
+.error {
+  box-shadow: 0 0 0 1px var(--clr-error) inset;
+  }
+.error-text {
+  color: var(--clr-error);
+  font-size: 0.8rem;
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-secondary);
+  margin-top: 0.2em;
+  box-shadow: none;
+}
 
