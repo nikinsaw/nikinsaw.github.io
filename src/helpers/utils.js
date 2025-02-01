@@ -14,3 +14,11 @@ export const getYearsTillNow = () => {
 
   return years + (halfYear ? '.5' : '');
 };
+
+export const copyEmail = () => {
+  navigator.clipboard.writeText('nikitanarendrasawant@gmail.com')
+}
+
+export const openLink = (link) => {
+  window.open(link)
+}

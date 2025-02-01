@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 38em;
+    width: 35em;
   }
 
   &__title {
@@ -80,18 +80,118 @@
     margin: 0.2em;
     text-align: left;
   }
+
+  &__call-email-buttons-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1em 0;
+    width: 100%;
+    gap: 0.5em;
+  }
+
+  &__book-call-button-wrapper {
+    margin: 1em 0;
+  }
+
+  &__email-button-wrapper {
+    align-items: center;
+    justify-items: center;
+    margin: 1em 0;
+  }
+
+  &__divider-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  &__divider {
+    flex-direction: row;
+    height: 1px;
+  }
+
+  &__divider-left {
+    width: 16em;
+    height: 1px;
+    background-color: var(--clr-neutral-700);
+  }
+
+  &__divider-right {
+    width: 16em;
+    height: 1px;
+    background-color: var(--clr-neutral-700);
+  }
+
+  &__name-email-inputs-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 0.5em;
+  }
+
+  &__message-input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1em 0;
+    width: 100%;
+    gap: 0.5em;
+  }
+  &__input-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 0.5em 0;
+  }
 }
+
 
 @media (max-width: 50em) {
   .contact {
     &__description {
       grid-template-columns: 1fr;
-      gap: 0.5em;
+      gap: 0.5em;  
     }
 
     &__content {
       width: fit-content;
       padding: 1.1em 2em 1.1em 1.1em;
+    }
+
+    &__call-email-buttons-wrapper {
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: stretch;
+    justify-self: center;
+    }
+
+    &__book-call-button-wrapper {
+      margin: 0.5em 0;
+    }
+
+    &__email-button-wrapper {
+      align-items: center;
+      justify-items: center;
+      margin: 0.5em 0;
+    }
+
+    &__divider-left {
+      width: 12em;
+    }
+
+    &__divider-right {
+      width: 12em;
+    }
+
+    &__name-email-inputs-wrapper {
+      display: flex;
+    } 
+
+    &__message-input-wrapper {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
